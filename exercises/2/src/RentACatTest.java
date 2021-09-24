@@ -66,6 +66,8 @@ public class RentACatTest {
 	@Test
 	public void testGetCatNullNumCats0() {
 		// TODO
+		Cat c = r.getCat(2);
+		assertNull("getCat did not return null when there are no cats", c);
 	}
 
 	/**
@@ -79,6 +81,12 @@ public class RentACatTest {
 	@Test
 	public void testGetCatNumCats3() {
 		// TODO
+		r.addCat(c1);
+		r.addCat(c2);
+		r.addCat(c3);
+		Cat c = r.getCat(2);
+		assertNotNull("getCat(2) returned null when there is cat with ID 2.", c);
+		assertEquals("Cat returned by getCat(2) doesn't have ID of 2",2, c.getId());
 	}
 
 	/**
