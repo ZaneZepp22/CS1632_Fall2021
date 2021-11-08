@@ -1,4 +1,5 @@
 classpath = bin
+sourcepath = src
 
 # Target class main method to run.  In this case, we are invoking the main method of DrunkCarnivalShooterImpl with the argument "test".
 target = DrunkCarnivalShooterImpl
@@ -6,11 +7,10 @@ target.args = test
 
 # If set to true, enumerates all possible values returned by Random.nextInt.
 # If set to false, the original Random.nextInt is called to generate an actual random number.
-# Temporarily set to false if you are overwhelmed with error messages from all the possible paths.
 cg.enumerate_random = true
 #cg.enumerate_random = false
 
-# On property violation, print the error and the choice trace
+# On property violation, print the error and the execution trace leading up to the error
 report.console.property_violation=error,trace
 
 # If true, prints program output as JPF traverses all possible paths
